@@ -4,7 +4,7 @@ This pattern provides a simple way to describe _**tree-like**_ structures, for e
 
 The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. Here, we have another example from work. In order to make further configurable processing possible , we need to describe the structure of data returned by HTTP interfaces which is a json string.
 
-```
+```js
 {
     data: {
         details: [{
@@ -34,7 +34,7 @@ The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. H
 }
 ```
 
-In the above example, we define the following _**format**_ which can describe it.
+In the above example, we define the following _**format**_ which can describe it. The keyword _**type**_ refers to the value type for the _**key**_. And _**format**_ defines the structure of the value, which is recursively.
 
 ```js
 const formatJson = {
