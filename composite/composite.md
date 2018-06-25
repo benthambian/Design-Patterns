@@ -56,7 +56,6 @@ const formatJson = {
                 {
                     key: "list",
                     type: "array",
-                    desc: "record list",
                     format: {
                         type: "object",
                         format: [
