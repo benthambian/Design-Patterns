@@ -34,5 +34,56 @@ The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. H
 }
 ```
 
+In the above example, we define the following _**format**_ which can describe it.
+
+```js
+const formatJson = {
+    key: "data",
+    type: "object"
+    format: [
+        {
+            key: "details",
+            type: "object"
+            format: [
+                {
+                    key: "name",
+                    type: "string"
+                },
+                {
+                    key: "avgScore",
+                    type: "float"
+                },
+                {
+                    key: "list",
+                    type: "array",
+                    desc: "record list",
+                    format: {
+                        type: "object",
+                        format: [
+                            {
+                                key: "date",
+                                type: "string"
+                            },
+                            {
+                                key: "score",
+                                type: "int"
+                            }
+                        ]
+                    }
+                }
+            ],
+        },
+        {
+            key: "count",
+            type: "int"
+        },
+        {
+            key: "comment",
+            type: "string"
+        }
+    ]
+};
+```
+
 
 
