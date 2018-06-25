@@ -1,4 +1,4 @@
-const { RuleType, RuleStatus, RuleValueType, RuleCacheKey} = require('../../../constant/rule');
+const { ValueType } = require('./types');
 const ObjectFormat          = require('./ObjectFormat');
 const ArrayFormat          = require('./ArrayFormat');
 const SimpleFormat          = require('./SimpleFormat');
@@ -13,22 +13,22 @@ class FormatFactory
         var format = null;
         switch(formatJson.type) {
             // 数组
-            case RuleValueType.Array:
+            case ValueType.Array:
                 format = new ArrayFormat(formatJson);
                 format.addElement(this.create(formatJson.format));
                 break;
 
-            case RuleValueType.Object:
+            case ValueType.Object:
                 format = new ObjectFormat(formatJson);
                 for(var i in formatJson.format) {
                     format.addElement(this.create(formatJson.format[i]));
                 }
                 break;
             
-            case RuleValueType.Int:
-            case RuleValueType.String:
-            case RuleValueType.Bool:
-            case RuleValueType.Float:
+            case ValueType.Int:
+            case ValueType.String:
+            case ValueType.Bool:
+            case ValueType.Float:
                 format = new SimpleFormat(formatJson);
                 break;
             

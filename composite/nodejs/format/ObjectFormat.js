@@ -1,4 +1,3 @@
-const { RuleType, RuleStatus, RuleValueType, RuleCacheKey} = require('../../../constant/rule');
 const BaseFormat = require('./BaseFormat');
 
 class ObjectFormat extends BaseFormat{

@@ -1,4 +1,4 @@
-const { RuleType, RuleStatus, RuleValueType, RuleCacheKey} = require('../../../constant/rule');
+const { ValueType } = require('./types');
 const BaseFormat = require('./BaseFormat');
 
 class SimpleFormat extends BaseFormat{
@@ -6,7 +6,7 @@ class SimpleFormat extends BaseFormat{
     constructor(formatJson) {
         super(formatJson);
 
-        if(! [RuleValueType.String, RuleValueType.Int, RuleValueType.Bool, RuleValueType.Float].includes(this.type)) {
+        if(! [ValueType.String, ValueType.Int, ValueType.Bool, ValueType.Float].includes(this.type)) {
             throw "Type Not Supported";
         }
     }
@@ -19,15 +19,18 @@ class SimpleFormat extends BaseFormat{
         var curType = typeof data;
         var result = false;
         switch(this.type) {
-            case RuleValueType.String:
+            case ValueType.String:
                 if(curType == this.type) result = true;
                 break;
-            case RuleValueType.Bool:
+            case ValueType.Bool:
                 if(curType == 'boolean') result = true;
                 break;
             default:
                 if (curType == 'number') {
-                    if(this.type == RuleValueType.Int && Number.isInteger(data) || this.type == RuleValueType.Float) {
+                    if(this.type == ValueType.Int 
+                        && Number.isInteger(data) 
+                        || this.type == ValueType.Float)
+                    {
                         result = true;
                     }
                 }
