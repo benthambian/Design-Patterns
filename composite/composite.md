@@ -34,7 +34,7 @@ The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. H
 }
 ```
 
-In the above example, we define the following _**format**_ which can describe it. The keyword _**type**_ refers to the value type for the _**key**_. And The field _**format**_ defines the structure of the value, which is recursively. It only appears necessarily when the value type is _object_ or _array_. If the value is an object, we define the key-value pairs in the field _**format**_. Otherwise, we just assume that the structures of items in _array_ are the same.
+In the above example, we define the following _**format**_ which can describe it. The keyword _**type**_ refers to the value type for the _**key**_. And the field _**format**_ defines the structure of the value, which is recursively. It only appears necessarily when the value type is _object_ or _array_. If the value is an object, we define the key-value pairs in the field _**format**_. Otherwise, we just assume that the structures of items in _array_ are the same.
 
 ```js
 const format = {
