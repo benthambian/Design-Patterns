@@ -34,10 +34,10 @@ The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. H
 }
 ```
 
-In the above example, we define the following _**format**_ which can describe it. The keyword _**type**_ refers to the value type for the _**key**_. And _**format**_ defines the structure of the value, which is recursively.
+In the above example, we define the following _**format**_ which can describe it. The keyword _**type**_ refers to the value type for the _**key**_. And _**format**_ defines the structure of the value, which is recursively. 
 
 ```js
-const formatJson = {
+const format = {
     key: "data",
     type: "object"
     format: [
