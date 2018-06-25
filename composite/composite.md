@@ -2,7 +2,7 @@
 
 This pattern provides a simple way to describe _**tree-like**_ structures, for example, menu which has sub-menus \(nodes\) and menu items \(leaves\). It helps us to characterize the relationship between the whole and the part.
 
-The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. Here, we have another example from work. In order to make further configurable processing possible , we need to describe the structure of data returned by HTTP interfaces which is a json string.
+The example of menu is implemented by _Head First Design Patterns,  O'Reilly_. Here, we have another example from work. In order to make further configurable processing possible , we need to describe the structure of data returned by HTTP interfaces, which is a json string.
 
 ```js
 {
