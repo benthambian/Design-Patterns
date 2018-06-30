@@ -43,34 +43,37 @@ const format = {
     format: [
         {
             key: "details",
-            type: "object"
-            format: [
-                {
-                    key: "name",
-                    type: "string"
-                },
-                {
-                    key: "avgScore",
-                    type: "float"
-                },
-                {
-                    key: "list",
-                    type: "array",
-                    format: {
-                        type: "object",
-                        format: [
-                            {
-                                key: "date",
-                                type: "string"
-                            },
-                            {
-                                key: "score",
-                                type: "int"
-                            }
-                        ]
+            type: "array"
+            format: {
+                type: "object",
+                format: [
+                    {
+                        key: "name",
+                        type: "string"
+                    },
+                    {
+                        key: "avgScore",
+                        type: "float"
+                    },
+                    {
+                        key: "list",
+                        type: "array",
+                        format: {
+                            type: "object",
+                            format: [
+                                {
+                                    key: "date",
+                                    type: "string"
+                                },
+                                {
+                                    key: "score",
+                                    type: "int"
+                                }
+                            ]
+                        }
                     }
-                }
-            ],
+                ]
+            },
         },
         {
             key: "count",
