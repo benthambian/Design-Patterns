@@ -6,5 +6,5 @@ the state pattern provides more strong scalabily and makes it more easier to man
 
 The abstract class diagram is below.
 
-![class diagram](https://raw.githubusercontent.com/benthambian/Design-Patterns/master/state/class%20diagram.jpg）
+<img src="https://raw.githubusercontent.com/benthambian/Design-Patterns/master/state/class%20diagram.jpg"></img>
 
